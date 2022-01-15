@@ -12,7 +12,7 @@ pipeline {
         }
 
         // SonarQube Listo.
-        stage('SonarQube Scanner') {
+        /* stage('SonarQube Scanner') {
              steps{
                     script {
                         scannerHome = tool 'SonarQube Scanner';
@@ -25,14 +25,14 @@ pipeline {
                         -Dsonar.login=b6608745dcdb00582c7b12570eabbac100299d95"
                 }
              }
-        }
+        } */
 
 
         //Docker
 
         stage('Parar la imagen anterior'){
             steps{
-                dir("/var/lib/jenkins/workspace/frontend/frontend"){
+                dir("/var/lib/jenkins/workspace/frontend"){
 				    sh 'docker stop frontend || true && docker rm frontend || true'	
 			    }
             }             
@@ -40,7 +40,7 @@ pipeline {
 
         stage('Contruir imagen docker'){
             steps{
-        		dir("/var/lib/jenkins/workspace/frontend/frontend"){
+        		dir("/var/lib/jenkins/workspace/frontend"){
                  	sh 'docker build . -t frontend'	
 	         	}
             }             
@@ -55,7 +55,7 @@ pipeline {
         
 	    stage('Correr imagen'){
             steps{
-        		dir("/var/lib/jenkins/workspace/frontend/frontend"){
+        		dir("/var/lib/jenkins/workspace/frontend"){
 				
 				sh 'docker run --rm --name frontend -d -p 3000:3000 frontend'
 	         	}
