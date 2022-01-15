@@ -67,7 +67,7 @@ pipeline {
 			        sh 'docker tag backend miige/backend:latest'	
 			        sh 'docker push miige/backend:latest'
                 }             
-        }
-    } */
+        }*/
+    } 
 
 }
