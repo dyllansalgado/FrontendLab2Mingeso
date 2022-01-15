@@ -22,7 +22,7 @@ pipeline {
                         -Dsonar.projectKey=trabajo2-front \
                         -Dsonar.sources=. \
                         -Dsonar.host.url=http://ec2-3-70-187-29.eu-central-1.compute.amazonaws.com:9000 \
-                        -Dsonar.login=e9572cecbbe6bab1aea8e0e2311f54a02c7b5df5"
+                        -Dsonar.login=e9572cecbbe6bab1aea8e0e2311f54a02c7b5df5 -X"
                 }
              }
         }
