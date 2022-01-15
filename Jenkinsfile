@@ -57,7 +57,7 @@ pipeline {
             steps{
         		dir("/var/lib/jenkins/workspace/frontend/frontend"){
 				
-				sh 'docker run --rm --name frontend -d -p 8000:8000 frontend'
+				sh 'docker run --rm --name frontend -d -p 3000:3000 frontend'
 	         	}
             }             
         }
