@@ -19,10 +19,12 @@ pipeline {
                     }
                 withSonarQubeEnv('trabajo2-front') { // If you have configured more than one global server connection, you can specify its name
                     sh "${scannerHome}/bin/sonar-scanner \
+                        -Dsonar.login=admin \
+                        -Dsonar.password=admin \
                         -Dsonar.projectKey=trabajo2-front \
                         -Dsonar.sources=. \
                         -Dsonar.host.url=http://ec2-3-70-187-29.eu-central-1.compute.amazonaws.com:9000 \
-                        -Dsonar.login=e9572cecbbe6bab1aea8e0e2311f54a02c7b5df5 -X"
+                        -Dsonar.login=e9572cecbbe6bab1aea8e0e2311f54a02c7b5df5"
                 }
              }
         }
