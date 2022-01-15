@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    /* environment {
+    environment {
 		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
-	} */
+	}
     stages {
         
         stage('Inicio'){
@@ -30,18 +30,18 @@ pipeline {
 
         //Docker
 
-        /* stage('Parar la imagen anterior'){
+        stage('Parar la imagen anterior'){
             steps{
-                dir("/var/lib/jenkins/workspace/T2-BackEnd/backend"){
-				    sh 'docker stop backend || true && docker rm backend || true'	
+                dir("/var/lib/jenkins/workspace/frontend/frontend"){
+				    sh 'docker stop frontend || true && docker rm frontend || true'	
 			    }
             }             
         }
 
         stage('Contruir imagen docker'){
             steps{
-        		dir("/var/lib/jenkins/workspace/T2-BackEnd/backend"){
-                 	sh 'docker build . -t backend'	
+        		dir("/var/lib/jenkins/workspace/frontend/frontend"){
+                 	sh 'docker build . -t frontend'	
 	         	}
             }             
         }
@@ -55,19 +55,19 @@ pipeline {
         
 	    stage('Correr imagen'){
             steps{
-        		dir("/var/lib/jenkins/workspace/T2-BackEnd/backend"){
+        		dir("/var/lib/jenkins/workspace/frontend/frontend"){
 				
-				sh 'docker run --rm --name backend -d -p 8000:8000 backend'
+				sh 'docker run --rm --name frontend -d -p 8000:8000 frontend'
 	         	}
             }             
         }
         
 	    stage('Subir imagen docker a hub'){
                 steps{
-			        sh 'docker tag backend miige/backend:latest'	
-			        sh 'docker push miige/backend:latest'
+			        sh 'docker tag frontend miige/frontend:latest'	
+			        sh 'docker push miige/frontend:latest'
                 }             
-        }*/
+        }
     } 
 
 }
