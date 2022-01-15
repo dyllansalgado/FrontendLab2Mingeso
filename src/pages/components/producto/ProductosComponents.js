@@ -19,7 +19,7 @@ const ProductList = ({ products }) => {
     //Se crea la funcion delete para poder borrar los productos por su ID.
     function deleteProducto(id) {
       //Utilizamos axios y el metodo delete para borrar los productos.
-      axios.delete("http://localhost:8000/producto/" + id)
+      axios.delete("http://161.35.187.91:8000/producto/" + id)
         .then(res => {
           console.log(res);
           window.location.reload(true);

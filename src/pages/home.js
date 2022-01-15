@@ -9,7 +9,7 @@ export default function Home() {
            <p>
               Trabajo número dos del ramo Metodos de Ingenieria de Software.
            </p>
-           <p><a className="btn btn-primary btn-lg" href="http://localhost:3000/productos" target="_blank" role="button">Ir a productos</a></p>
+           <p><a className="btn btn-primary btn-lg" href="http://161.35.187.91:3000/productos" target="_blank" role="button">Ir a productos</a></p>
        </div>
     </div>
   )}

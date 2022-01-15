@@ -17,7 +17,7 @@ class VentanaModal extends Component{
   agregar = e => {
     console.log(this.state)
     e.preventDefault();
-      axios.post("http://localhost:8000/producto/", {
+      axios.post("http://161.35.187.91:8000/producto/", {
         codigoProducto: this.state.codigoProducto,
         nombreProducto: this.state.nombreProducto,
         fechaVencimiento: this.state.fechaVencimiento,
@@ -135,7 +135,7 @@ export default class Productos extends Component {
   //BORRAR POR ID
   deleteProducto(id) {
     console.log(id);
-    axios.delete("http://localhost:8000/producto/" + id)
+    axios.delete("http://161.35.187.91:8000/producto/" + id)
       .then(res => {
         console.log(res);
         window.location.reload(true);
@@ -143,7 +143,7 @@ export default class Productos extends Component {
   };
   componentDidMount() {
     //Obtener productos
-    axios.get('http://localhost:8000/producto/').then(res => {
+    axios.get('http://161.35.187.91:8000/producto/').then(res => {
       var productos = res.data;
       console.log(productos)
     
@@ -157,7 +157,7 @@ export default class Productos extends Component {
       <div>
         <Navbar expand="lg" variant="light" bg="light">
         <Container>
-        <Navbar.Brand href="http://localhost:3000/home">Volver al inicio</Navbar.Brand>
+        <Navbar.Brand href="http://161.35.187.91:3000/home">Volver al inicio</Navbar.Brand>
         <h1 > Productos </h1>
         <AñadirProductos></AñadirProductos>
         </Container>
