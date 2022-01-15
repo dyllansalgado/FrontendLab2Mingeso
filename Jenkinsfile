@@ -21,10 +21,10 @@ pipeline {
                     sh "${scannerHome}/bin/sonar-scanner \
                         -Dsonar.login=admin \
                         -Dsonar.password=admin \
-                        -Dsonar.projectKey=trabajo2-front \
+                        -Dsonar.projectKey=frontendMingeso \
                         -Dsonar.sources=. \
-                        -Dsonar.host.url=http://ec2-3-70-187-29.eu-central-1.compute.amazonaws.com:9000 \
-                        -Dsonar.login=e9572cecbbe6bab1aea8e0e2311f54a02c7b5df5"
+                        -Dsonar.host.url=http://161.35.187.91:9000/ \
+                        -Dsonar.login=b6608745dcdb00582c7b12570eabbac100299d95"
                 }
              }
         }
