@@ -14,7 +14,7 @@ pipeline {
 	stage('Selenium Test'){
 		steps{
 			catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
-        		dir("/var/lib/jenkins/workspace/frontend"){
+        		dir("/var/lib/jenkins/workspace/frontend/TestSelenium"){
             			sh 'npm install react-scripts'
             			sh 'npm test a'
         		}
