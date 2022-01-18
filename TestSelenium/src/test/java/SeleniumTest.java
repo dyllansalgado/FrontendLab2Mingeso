@@ -23,6 +23,7 @@ public class SeleniumTest {
     // Y se configura el wait implicito
     @BeforeAll
     public static void setupDriver(){
+        System.setProperty("webdriver.gecko.driver","geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
@@ -49,7 +50,7 @@ public class SeleniumTest {
     @Order(1)
     public void initWeb() {
         // Se dirige a la página de Log In
-        driver.get("http://localhost:3000/home");
+        driver.get("http://161.35.187.91:3000/home");
         // Se busca el boton de inicio
         WebElement iniciar = driver.findElement(By.linkText("Ir a productos"));
         iniciar.click();
