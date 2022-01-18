@@ -12,12 +12,17 @@ pipeline {
         }
 	    
 	stage('Selenium Test'){
-    		catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
+		steps{
+			catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
         		dir("/var/lib/jenkins/workspace/frontend"){
             			sh 'npm install react-scripts'
             			sh 'npm test a'
         		}
     		}
+		
+		}
+		
+		
 	}
 
         // SonarQube Listo.
