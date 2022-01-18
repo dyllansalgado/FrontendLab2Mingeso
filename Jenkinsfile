@@ -11,7 +11,7 @@ pipeline {
             } 
         }
 	    
-	/stage('Selenium Test'){
+	/*stage('Selenium Test'){
 		steps{
 			catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
         		dir("/var/lib/jenkins/workspace/frontend/TestSelenium"){
@@ -23,10 +23,10 @@ pipeline {
 		}
 		
 		
-	} 
+	}*/
 
         // SonarQube Listo.
-        /*stage('SonarQube Scanner') {
+        stage('SonarQube Scanner') {
              steps{
                     script {
                         scannerHome = tool 'SonarQube Scanner';
@@ -39,7 +39,7 @@ pipeline {
                         -Dsonar.login=b6608745dcdb00582c7b12570eabbac100299d95"
                 }
              }
-        }*/
+        }
 
         //Docker
 
