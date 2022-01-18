@@ -25,7 +25,7 @@ public class SeleniumTest {
     @BeforeAll
     public static void setupDriver(){
         //System.setProperty("webdriver.gecko.driver","/var/lib/jenkins/workspace/frontend/geckodriver.exe");
-        System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/frontend/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
