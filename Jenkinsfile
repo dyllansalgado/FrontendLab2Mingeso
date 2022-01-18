@@ -10,9 +10,18 @@ pipeline {
                 echo "Iniciando"
             } 
         }
+	    
+	stage('Selenium Test'){
+    		catchError(buildResult: 'SUCCESS', stagreResult: 'FAILURE'){
+        		dir("/var/lib/jenkins/workspace/frontend"){
+            			sh 'npm install react-scripts'
+            			sh 'npm test a'
+        		}
+    		}
+	}
 
         // SonarQube Listo.
-        /*stage('SonarQube Scanner') {
+        stage('SonarQube Scanner') {
              steps{
                     script {
                         scannerHome = tool 'SonarQube Scanner';
@@ -25,8 +34,7 @@ pipeline {
                         -Dsonar.login=b6608745dcdb00582c7b12570eabbac100299d95"
                 }
              }
-        }*/
-
+        }
 
         //Docker
 
