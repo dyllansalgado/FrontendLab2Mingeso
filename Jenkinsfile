@@ -33,10 +33,10 @@ pipeline {
                     }
                 withSonarQubeEnv('trabajo2-front') { // If you have configured more than one global server connection, you can specify its name
                     sh "${scannerHome}/bin/sonar-scanner \
-                        -Dsonar.projectKey=frontendMingeso \
-                        -Dsonar.sources=. \
-                        -Dsonar.host.url=http://161.35.187.91:9000/ \
-                        -Dsonar.login=b6608745dcdb00582c7b12570eabbac100299d95"
+                          -Dsonar.projectKey=front \
+			  -Dsonar.sources=. \
+			  -Dsonar.host.url=http://161.35.187.91:9000 \
+			  -Dsonar.login=fe2cf601e9feee2790c9d6622cbd100a7211fb1e
                 }
              }
         }
