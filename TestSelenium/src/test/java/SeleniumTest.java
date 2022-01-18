@@ -55,7 +55,7 @@ public class SeleniumTest {
         WebElement iniciar = driver.findElement(By.linkText("Ir a productos"));
         iniciar.click();
     }
-
+//a
 
 
 
