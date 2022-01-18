@@ -23,7 +23,7 @@ public class SeleniumTest {
     // Y se configura el wait implicito
     @BeforeAll
     public static void setupDriver(){
-        //System.setProperty("webdriver.gecko.driver","/var/lib/jenkins/workspace/frontend/TestSelenium/geckodriver");
+        System.setProperty("webdriver.gecko.driver","/var/lib/jenkins/workspace/frontend/TestSelenium/geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
