@@ -18,7 +18,7 @@ import java.util.List;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class SeleniumTest {
     // Se declara el driver para el navegador Web
-    private static WebDriver driver;
+    public static WebDriver driver;
 
     // Antes de hace cualquier test se instancia el driver de firefox
     // Y se configura el wait implicito
