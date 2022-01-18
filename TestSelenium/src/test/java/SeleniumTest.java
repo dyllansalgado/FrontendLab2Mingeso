@@ -55,60 +55,6 @@ public class SeleniumTest {
         iniciar.click();
     }
 
-    @Test
-    @Order(2)
-    public void addFailProducto() {
-
-        // Se busca en la pagina de productos, el boton agregar productos
-        driver.get("http://localhost:3000/productos");
-        // Se busca el boton agregar
-        WebElement agregar = driver.findElement(By.xpath("//*[contains(concat( \" \", @class, \" \" ), concat( \" \", \"btn-primary\", \" \" ))]"));
-        agregar.click();
-        // Se agrega el nombre de producto
-        WebElement nombre = driver.findElement(By.id("nombre"));
-        nombre.sendKeys("Nombre_5");
-        // Se agrega el codigo del producto
-        WebElement codigo = driver.findElement(By.id("codigo"));
-        codigo.sendKeys("Codigo_5");
-        // Se agrega la fecha
-        WebElement date = driver.findElement(By.id("fechaVencimiento"));
-        date.click();
-        date.sendKeys("2022-01-01");
-        // Se agrega la categoria del producto
-        WebElement cat = driver.findElement(By.id("categoria"));
-        cat.sendKeys("2");
-        // Se agrega el precio del producto
-        WebElement precio = driver.findElement(By.id("precio"));
-        precio.sendKeys("5500");
-        precio.sendKeys(Keys.ENTER);
-    }
-    @Test
-    @Order(3)
-    public void addProducto() {
-        // Se busca en la pagina de productos, el boton agregar productos
-        driver.get("http://localhost:3000/productos");
-        // Se busca el boton agregar
-        WebElement agregar = driver.findElement(By.xpath("//*[contains(concat( \" \", @class, \" \" ), concat( \" \", \"btn-primary\", \" \" ))]"));
-        agregar.click();
-        // Se agrega el nombre de producto
-        WebElement nombre = driver.findElement(By.id("nombre"));
-        nombre.sendKeys("Nombre_4");
-        // Se agrega el codigo del producto
-        WebElement codigo = driver.findElement(By.id("codigo"));
-        codigo.sendKeys("Codigo_4");
-        // Se agrega la fecha
-        WebElement date = driver.findElement(By.id("fechaVencimiento"));
-        date.click();
-        date.sendKeys("2022-01-01");
-        // Se agrega la categoria del producto
-        WebElement cat = driver.findElement(By.id("categoria"));
-        cat.sendKeys("1");
-        // Se agrega el precio del producto
-        WebElement precio = driver.findElement(By.id("precio"));
-        precio.sendKeys("4500");
-        precio.sendKeys(Keys.ENTER);
-    }
-
 
 
 
