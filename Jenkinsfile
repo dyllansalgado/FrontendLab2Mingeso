@@ -15,8 +15,8 @@ pipeline {
 		steps{
 			catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
         		dir("/var/lib/jenkins/workspace/frontend/TestSelenium"){
-            			sh 'npm install react-scripts'
-            			sh 'npm test a'
+            			sh 'chmod +x ./gradlew'
+                        	sh './gradlew test'
         		}
     		}
 		
