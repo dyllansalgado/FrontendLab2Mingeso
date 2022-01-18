@@ -32,7 +32,7 @@ pipeline {
                         scannerHome = tool 'SonarQube Scanner';
                     }
                 withSonarQubeEnv('trabajo2-front') { // If you have configured more than one global server connection, you can specify its name
-                    sh "${scannerHome}/bin/sonar-scanner \
+                    sh "/bin/sonar-scanner \
                           -Dsonar.projectKey=front \
 			  -Dsonar.sources=. \
 			  -Dsonar.host.url=http://161.35.187.91:9000 \
