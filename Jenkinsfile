@@ -26,7 +26,7 @@ pipeline {
 	} */
 
         // SonarQube Listo.
-        stage('SonarQube Scanner') {
+        /*stage('SonarQube Scanner') {
              steps{
                     script {
                         scannerHome = tool 'SonarQube Scanner';
@@ -39,7 +39,7 @@ pipeline {
                         -Dsonar.login=b6608745dcdb00582c7b12570eabbac100299d95"
                 }
              }
-        }
+        }*/
 
         //Docker
 
